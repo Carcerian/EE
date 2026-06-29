@@ -1,11 +1,9 @@
 # `x2_inc_plot.nss`
 
 Source: `NSS/x2_/x2_inc_plot.nss`  
-5 functions · 0 constants
+4 functions · 0 constants
 
 ## Functions
-
-#### `void SetupWander(string sMonster, int nPercent, int nNumber)`
 
 #### `void SetupWander(string sMonster, int nPercent, int nNumber)`
 

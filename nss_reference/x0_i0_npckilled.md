@@ -1,7 +1,7 @@
 # `x0_i0_npckilled.nss`
 
 Source: `NSS/x0_/x0_i0_npckilled.nss`  
-14 functions · 3 constants
+7 functions · 3 constants
 
 ## Constants
 
@@ -44,26 +44,3 @@ Source: `NSS/x0_/x0_i0_npckilled.nss`
 
 #### `int GetNPCResurrected(object oPC, object oNPC = OBJECT_SELF)`
 > Check if this PC resurrected this NPC
-
-#### `void SetNPCKilled(object oPC, string sNPCTag, int bDidKill = TRUE)`
-> Mark all members of the party as having killed the NPC
-
-#### `int GetNPCKilled(object oPC, string sNPCTag)`
-> Determine if the player killed this NPC
-
-#### `object CreateReplacementNPC(object oPC, string sNPCResRef, location lNPC)`
-> Create a replacement for the NPC
-
-#### `void SetNPCJustResurrected(object oNPC = OBJECT_SELF, int bRaised = TRUE)`
-> Mark the NPC as just having been resurrected
-
-#### `int GetNPCJustResurrected(object oNPC = OBJECT_SELF)`
-> Check if the NPC was just resurrected
-
-#### `void SetNPCResurrected(object oPC, object oNPC = OBJECT_SELF, int bRaised = TRUE)`
-> Mark the PC & friends as having resurrected this NPC
-> and clear the 'just resurrected' var.
-
-#### `int GetNPCResurrected(object oPC, object oNPC = OBJECT_SELF)`
-> Check if this PC resurrected this NPC
-> Check if the NPC was just resurrected

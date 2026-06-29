@@ -1,7 +1,7 @@
 # `x0_i0_assoc.nss`
 
 Source: `NSS/x0_/x0_i0_assoc.nss`  
-20 functions · 96 constants
+10 functions · 96 constants
 
 ## Constants
 
@@ -142,39 +142,3 @@ Source: `NSS/x0_/x0_i0_assoc.nss`
 > This is a wrapper for ClearAllActions.
 > Added to try and track down some bugs in
 > the AI.
-
-#### `int GetPercentageHPLoss(object oWounded)`
-
-#### `void ResetHenchmenState()`
-> Created By: Preston Watamaniuk
-> Created On: April 4, 2002
-
-#### `int AssociateCheck(object oCheck)`
-> True if the object is NOT the caller's henchman
-
-#### `void SetAssociateState(int nCondition, int bValid = TRUE, object oAssoc = OBJECT_SELF)`
-
-#### `int GetAssociateState(int nCondition, object oAssoc = OBJECT_SELF)`
-
-#### `int GetAssociateHealMaster()`
-> Created By: Preston Watamaniuk
-> Created On: Nov 18, 2001
-
-#### `float GetFollowDistance()`
-> Determine the distance we should follow at
-
-#### `void SetAssociateStartLocation()`
-> Set Associate Start Location
-> Copyright (c) 2001 Bioware Corp.
-> Created By: Preston Watmaniuk
-> Created On: Nov 21, 2001
-
-#### `location GetAssociateStartLocation()`
-> Get Associate Start Location
-> Copyright (c) 2001 Bioware Corp.
-> Created By: Preston Watmaniuk
-> Created On: Nov 21, 2001
-
-#### `void ClearActions(int nClearConstant = 0, int bClearCombat = FALSE)`
-> Created By: Brent
-> Created On: February 6, 2003

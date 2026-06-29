@@ -1,7 +1,7 @@
 # `x3_inc_string.nss`
 
 Source: `NSS/x3_/x3_inc_string.nss`  
-8 functions · 7 constants
+4 functions · 7 constants
 
 ## Constants
 
@@ -48,27 +48,4 @@ Source: `NSS/x3_/x3_inc_string.nss`
 
 #### `string StringReplace(string sSource, string sFind, string sReplace)`
 > FILE: x3_inc_string         FUNCTION: StringReplace()
-> This function will replace any occurrence of sFind in sSource with sReplace.
-
-#### `string StringToRGBString(string sString, string sRGB)`
-> This function will make sString be the specified color
-> as specified in sRGB.  RGB is the Red, Green, and Blue
-> components of the color.  Each color can have a value from
-> 0 to 7.
-
-#### `string StringParse(string sSource, string sDelimiter = " ", int bRightToLeft = FALSE)`
-> This function will parse sSource from left to right until it encounters
-> sDelimiter and will return all the characters it encountered before
-> the delimiter occurred.
-> If bRightToLeft is set to TRUE then it will parse from right to left instead.
-
-#### `string StringRemoveParsed(string sSource, string sParsed, string sDelimiter = " ", int bRightToLeft = FALSE)`
-> This function will take sParsed and remove it from the left side of sSource.
-> It will also remove any excess sDelimiter occurrences after sParsed.
-> If bRightToLeft is set to TRUE then it will perform this from the right side
-> rather than the left.
-> No check is made that sParsed actually matches sSource; all that matters
-> about sParsed is its length.
-
-#### `string StringReplace(string sSource, string sFind, string sReplace)`
 > This function will replace any occurrence of sFind in sSource with sReplace.

@@ -1,7 +1,7 @@
 # `nw_i0_generic.nss`
 
 Source: `NSS/nw_/nw_i0_generic.nss`  
-31 functions · 12 constants
+23 functions · 12 constants
 
 ## Constants
 
@@ -87,17 +87,11 @@ Source: `NSS/nw_/nw_i0_generic.nss`
 #### `int GetShouldNotCastSpellsBecauseofArmor(object oTarget, int nClass)`
 > Returns true if a wizard or sorcerer and wearing armor
 
-#### `int chooseTactics(object oIntruder)`
-
 #### `int __InCombatRound()`
 > Created By:   Brent
 > Created On:   July 11 2003
 
 #### `void __TurnCombatRoundOn(int bBool)`
-
-#### `void DetermineCombatRound(object oIntruder = OBJECT_INVALID, int nAI_Difficulty = 10)`
-
-#### `void RespondToShout(object oShouter, int nShoutIndex, object oIntruder = OBJECT_INVALID)`
 
 #### `void SetNPCWarningStatus(int nStatus = TRUE)`
 > NPCs who have warning status set to TRUE will allow
@@ -117,12 +111,6 @@ Source: `NSS/nw_/nw_i0_generic.nss`
 
 #### `int GetFleeToExit()`
 
-#### `int GetCharacterLevel(object oTarget)`
-
-#### `void RemoveAmbientSleep()`
-
-#### `object GetLockedObject(object oMaster)`
-
 #### `void CheckIsUnlocked(object oLastObject)`
 
 #### `void PlayMobileAmbientAnimations()`
@@ -131,7 +119,3 @@ Source: `NSS/nw_/nw_i0_generic.nss`
 > code from x0_i0_anims.
 
 #### `void DetermineSpecialBehavior(object oIntruder = OBJECT_INVALID)`
-
-#### `int BashDoorCheck(object oIntruder = OBJECT_INVALID)`
-
-#### `int DetermineClassToUse()`

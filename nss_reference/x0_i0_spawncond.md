@@ -1,7 +1,7 @@
 # `x0_i0_spawncond.nss`
 
 Source: `NSS/x0_/x0_i0_spawncond.nss`  
-8 functions · 28 constants
+4 functions · 28 constants
 
 ## Constants
 
@@ -53,16 +53,3 @@ Source: `NSS/x0_/x0_i0_spawncond.nss`
 > Sets the correct listen checks on the NPC by
 > determining what talents they possess or what
 > class they use.
-
-#### `void SetSpawnInCondition(int nCondition, int bValid = TRUE)`
-> Sets the specified spawn-in condition on the caller as directed.
-
-#### `int GetSpawnInCondition(int nCondition)`
-> Returns TRUE if the specified condition has been set on the
-> caller, otherwise FALSE.
-
-#### `void SetSpawnInLocals(int nCondition)`
-> Sets the listening patterns and local variables needed
-> for the given spawn-in condition on the caller.
-
-#### `void SetListeningPatterns()`

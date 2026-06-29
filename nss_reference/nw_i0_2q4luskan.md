@@ -1,7 +1,7 @@
 # `nw_i0_2q4luskan.nss`
 
 Source: `NSS/nw_/nw_i0_2q4luskan.nss`  
-26 functions · 22 constants
+13 functions · 22 constants
 
 ## Constants
 
@@ -70,31 +70,3 @@ Source: `NSS/nw_/nw_i0_2q4luskan.nss`
 
 #### `void CreateObjectVoid(int nObjectType, string sTemplate, location lLoc, int bUseAppearAnimation = FALSE)`
 > Creates a creature with a specific string at a specified location
-
-#### `void Give2Q4PlotItem(int nPlotItemConstant)`
-
-#### `int GetHas2Q4PlotItem(object oItemPossesser, int nPlotItemConstant)`
-
-#### `void MoveTo2Q4PlotPoint(int nPlotPointIndex)`
-
-#### `void SetLocalPlotIntOnCharacter(object oNPC, int nPlotStateIndex)`
-
-#### `int GetLocalPlotIntFromCharacter(object oNPC)`
-
-#### `int GetCanSeePC(object oObject = OBJECT_SELF)`
-
-#### `void PlayConversationAnimation(int nAnimationConstant, object oTarget)`
-> Created By: Preston Watamaniuk
-> Created On: Jan 28, 2002
-
-#### `void CreateColmarrPotion()`
-
-#### `void SetMachineState(int nCondition, int bValid)`
-
-#### `int GetMachineState(int nCondition)`
-
-#### `void FaceNearestPC()`
-
-#### `void AssignPCDebugString(string sString)`
-
-#### `void CreateObjectVoid(int nObjectType, string sTemplate, location lLoc, int bUseAppearAnimation = FALSE)`

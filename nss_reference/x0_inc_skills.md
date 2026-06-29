@@ -1,7 +1,7 @@
 # `x0_inc_skills.nss`
 
 Source: `NSS/x0_/x0_inc_skills.nss`  
-15 functions · 63 constants
+8 functions · 63 constants
 
 ## Constants
 
@@ -77,27 +77,6 @@ Source: `NSS/x0_/x0_inc_skills.nss`
 
 #### `void skillCTRAPTakeComponent(string sComponent, object oPC, int nTrapDifficulty)`
 
-#### `int skillCTRAPSetCurrentTrapView(string sComponent)`
-
-#### `int skillCTRAPGetCurrentTrapViewEquals(string sComponent)`
-
-#### `string skillCTRAPGetCurrentTrapView()`
-
-#### `void DestroyNumItems(object oTarget, string sItem, int nNumItems)`
-> destroys the indicated number of items
-
-#### `void skillCTRAPCreateTrapKit(string sComponent, object oPC, int nTrapDifficulty)`
-
-#### `int skillCTRAPGetHasComponent(string sComponent, object oPC, int nTrapDifficulty)`
-
-#### `void skillCTRAPTakeComponent(string sComponent, object oPC, int nTrapDifficulty)`
-
-#### `void ClearTrapMaking()`
-> Created By:
-> Created On:
-
-#### `void skillCTRAPCreateTrapKit(string sComponent, object oPC, int nTrapDifficulty)`
-
 #### `void skillCTRAPSetCurrentTrapView(string sComponent)`
 > Created By:
 > Created On:
@@ -110,3 +89,9 @@ Source: `NSS/x0_/x0_inc_skills.nss`
 
 #### `void DestroyNumItems(object oTarget, string sItem, int nNumItems)`
 > destroys the indicated number of items
+
+#### `void skillCTRAPCreateTrapKit(string sComponent, object oPC, int nTrapDifficulty)`
+
+#### `void ClearTrapMaking()`
+> Created By:
+> Created On:

@@ -1,7 +1,7 @@
 # `x2_i0_spells.nss`
 
 Source: `NSS/x2_/x2_i0_spells.nss`  
-28 functions · 8 constants
+17 functions · 8 constants
 
 ## Constants
 
@@ -61,66 +61,15 @@ Source: `NSS/x2_/x2_i0_spells.nss`
 > nRounds  - Rounds the stun effect holds
 > fRange   - Range of the EffectCone
 
-#### `effect CreateBadTideEffectsLink()`
-
-#### `effect CreateGoodTideEffectsLink()`
-
-#### `int GetSlashingWeapon(object oItem)`
-> AN, 2003
-> Returns TRUE if oItem is a slashing weapon
-
 #### `int GetIsRangedWeapon(object oItem)`
 > AN, 2003
 > Returns TRUE if oItem is a ranged weapon
-
-#### `int GetMeleeWeapon(object oItem)`
-> AN, 2003
-> Returns TRUE, if oItem is a melee weapon
-
-#### `int GetIsMagicalItem(object oItem)`
-> AN, 2003
-> Returns TRUE if oItem has any item property that classifies it as magical item
-
-#### `int GetIsMagicStatBonus(object oCaster)`
-
-#### `void CheckAndApplyEpicRageFeats(int nRounds)`
-> GZ, 2003-07-09
-> Hub function for the epic barbarian feats that upgrade rage. Call from
-> the end of the barbarian rage spellscript
-
-#### `void CheckAndApplyThunderingRage(int nRounds)`
-> GZ, 2003-07-09
-> If the character calling this function from a spellscript has the thundering
-> rage feat, his weapons are upgraded to deafen and cause 2d6 points of massive
-> criticals
-
-#### `void CheckAndApplyTerrifyingRage(int nRounds)`
-> GZ, 2003-07-09
-> If the character calling this function from a spellscript has the terrifying
-> rage feat, he gets an aura of fear for the specified duration
-> The saving throw against this fear is a check opposed to the character's
-> intimidation skill
-
-#### `void DoMindBlast(int nDC, int nDuration, float fRange)`
-> Keith Warner
-> Do a mind blast
-> nHitDice - HitDice/Caster Level of the creator
-> nDC      - DC of the Save to resist
-> nRounds  - Rounds the stun effect holds
-> fRange   - Range of the EffectCone
 
 #### `int DoCubeParalyze(object oTarget, object oSource, int nSaveDC = 16)`
 > Gelatinous Cube Paralyze attack
 
 #### `void EngulfAndDamage(object oTarget, object oSource)`
 > GZ: Gel. Cube special abilities
-
-#### `int GetEpicSpellSaveDC(object oCaster)`
-> Georg Zoeller, 2003-09-19
-> Save DC against Epic Spells is the relevant ability score of the caster
-> + 20. The hightest ability score of the casting relevants is 99.99% identical
-> with the one that is used for casting, so we just take it.
-> if used by a placeable, it is equal to the placeables WILL save field.
 
 #### `int GetBestAOEBehavior(int nSpellID)`
 > GZ: Sept 2003

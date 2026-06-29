@@ -1,7 +1,7 @@
 # `x3_inc_horse.nss`
 
 Source: `NSS/x3_/x3_inc_horse.nss`  
-112 functions · 43 constants
+79 functions · 43 constants
 
 ## Constants
 
@@ -376,74 +376,8 @@ Source: `NSS/x3_/x3_inc_horse.nss`
 
 #### `void HORSE_SupportReloadMountedPCFromDatabase(object oPC, string sDatabase)`
 
-#### `void HorseReloadFromDatabase(object oPC, string sDatabase)`
-
-#### `void HorseSaveToDatabase(object oPC, string sDatabase)`
-
-#### `object HorseCreateHorse(string sResRef, location lLoc, object oOwner = OBJECT_INVALID, string sTag = "", int nAppearance = -1, int nTail = -1, int nFootstep = -1, string sScript = "")`
-
-#### `int HorseGetIsMounted(object oTarget)`
-
-#### `int HorseGetCanBeMounted(object oTarget, object oRider = OBJECT_INVALID, int bAssignMount = FALSE)`
-
-#### `string HorseGetMountFailureMessage(object oTarget, object oRider = OBJECT_INVALID)`
-
-#### `void HorseSetOwner(object oHorse, object oOwner, int bAssign = FALSE)`
-
-#### `void HorseRemoveOwner(object oHorse)`
-
-#### `object HorseGetOwner(object oHorse)`
-
-#### `void HorseAddHorseMenu(object oPC)`
-
-#### `void HorseSetPhenotype(object oRider, int bJoust = FALSE)`
-
-#### `int HorseGetIsDisabled(object oCreature)`
-
-#### `void HorseMount(object oHorse, int bAnimate = TRUE, int bInstant = FALSE, int nState = 0)`
-
-#### `object HorseDismount(int bAnimate = TRUE, int bSetOwner = TRUE)`
-
-#### `int HorseGetMountTail(object oHorse)`
-
-#### `void HorseInstantDismount(object oRider)`
-
-#### `void HorseInstantMount(object oRider, int nTail, int bJoust = FALSE, string sResRef = "")`
-
-#### `object HorseGetPaladinMount(object oRider)`
-
-#### `object HorseSummonPaladinMount(int bPHBDuration = FALSE)`
-
-#### `void HorseUnsummonPaladinMount()`
-
-#### `int HorseGetIsAMount(object oTarget)`
-
-#### `void HorseStoreInventory(object oCreature, object oRider = OBJECT_INVALID)`
-
-#### `void HorseRestoreInventory(object oCreature, int bDrop = FALSE)`
-
-#### `void HorseChangeToDefault(object oCreature)`
-
-#### `void HorseIfNotDefaultAppearanceChange(object oCreature)`
-
-#### `object HorseGetMyHorse(object oRider)`
-
-#### `int HorseGetHasAHorse(object oRider)`
-
-#### `object HorseGetHorse(object oRider, int nN = 1)`
-
-#### `void HorseRestoreHenchmenLocations(object oPC)`
-
-#### `void HorseHitchHorses(object oHitch, object oClicker, location lPreJump)`
-
-#### `void HorseForceJump(object oJumper, object oDestination, float fRange = 2.0, int nTimeOut = 10)`
-
-#### `void HorseMoveAssociates(object oMaster)`
-
 #### `void HorseDismountWrapper()`
 
 #### `void HorseReassign(object oHorse, object oHench, object oMaster)`
 
 #### `int HorseHandleDeath()`
-
-#### `void HorsePreloadAnimations(object oPC)`

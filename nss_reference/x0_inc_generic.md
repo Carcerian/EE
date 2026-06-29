@@ -1,7 +1,7 @@
 # `x0_inc_generic.nss`
 
 Source: `NSS/x0_/x0_inc_generic.nss`  
-17 functions · 1 constants
+11 functions · 1 constants
 
 ## Constants
 
@@ -75,33 +75,3 @@ Source: `NSS/x0_/x0_inc_generic.nss`
 #### `int GetIsFighting(object oFighting)`
 > Does a check to determine if the NPC has an attempted
 > spell or attack target
-
-#### `void bkSetupBehavior(int nBehaviour)`
-
-#### `int GetCombatDifficulty(object oRelativeTo = OBJECT_SELF, int bEnable = FALSE)`
-> Return the combat difficulty.
-> This is only used for henchmen and its only function currently
-> is to keep henchmen from casting spells in an easy fight.
-> This determines the difficulty by counting the number of allies
-> and enemies and their respective CRs, then converting the value
-> into a "spell CR" rating.
-> A value of 20 means use whatever you have, a negative value
-> means a very easy fight.
-> Only does something if Enable is turned on, since I originally turned this function off
-
-#### `object bkAcquireTarget()`
-> This function returns the target for this combat round.
-> Normally, this will be the same target as the last round.
-> The only time this changes is if the target is gone/killed
-> or they are in dying mode.
-
-#### `object ChooseNewTarget()`
-> Choose a new nearby target. Target must be an enemy, perceived,
-> and not in dying mode. If possible, we first target members of
-> a class we hate.
-
-#### `int GetCRMax()`
-> Created By: Preston Watamaniuk
-> Created On: Nov 18, 2001
-
-#### `int bkEvaluationSanityCheck(object oIntruder, float fFollow)`

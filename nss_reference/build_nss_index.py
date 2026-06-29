@@ -143,7 +143,7 @@ def parse_nss(path: Path):
         depth += line.count("{") - line.count("}")
         if depth < 0:
             depth = 0
-    return funcs, consts
+    return _dedupe_funcs(funcs), consts
 
 
 def _finish_sig(sig_text, funcs, doc):
@@ -189,6 +189,21 @@ def _clean_doc(lines):
         if s:
             out.append(s)
     return out
+
+
+def _dedupe_funcs(funcs):
+    """Collapse prototype+definition pairs (same name, same file) into one entry,
+    keeping whichever carries the doc comment. Genuine cross-FILE redefinitions are
+    handled later in the flat index and are left intact here."""
+    best, order = {}, []
+    for f in funcs:
+        n = f["name"]
+        if n not in best:
+            best[n] = f
+            order.append(n)
+        elif not best[n]["doc"] and f["doc"]:
+            best[n] = f
+    return [best[n] for n in order]
 
 
 def _norm_params(p):

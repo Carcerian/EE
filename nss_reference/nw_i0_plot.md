@@ -1,7 +1,7 @@
 # `nw_i0_plot.nss`
 
 Source: `NSS/nw_/nw_i0_plot.nss`  
-49 functions · 16 constants
+45 functions · 16 constants
 
 ## Constants
 
@@ -81,8 +81,6 @@ Source: `NSS/nw_/nw_i0_plot.nss`
 
 #### `int CheckIntelligenceNormal()`
 
-#### `int CheckIntelligenceNormal()`
-
 #### `int CheckIntelligenceHigh()`
 
 #### `int CheckWisdomHigh()`
@@ -141,17 +139,3 @@ Source: `NSS/nw_/nw_i0_plot.nss`
 #### `int GetNPCEasyMark(object oTarget)`
 > returns a value that will be subtracted from the
 > oTarget's DC to resist APpraise or Persuasion
-
-#### `void gplotAppraiseOpenStore(object oStore, object oPC, int nBonusMarkUp = 0, int nBonusMarkDown = 0)`
-> Created By:
-> Created On:
-> 2003-05-26: Updated from XP1 sources - Georg
-
-#### `void gplotAppraiseFavOpenStore(object oStore, object oPC, int nBonusMarkUp = 0, int nBonusMarkDown = 0)`
-> Created By: Keith Warner
-> Created On: Mar 7/03
-> 2003-05-26: Updated from XP1 sources - Georg
-
-#### `void PlayCharacterTheme(int nTheme)`
-> plays the correct character theme
-> assumes OBJECT_SELF is in the area

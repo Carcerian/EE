@@ -1,7 +1,7 @@
 # `x2_inc_switches.nss`
 
 Source: `NSS/x2_/x2_inc_switches.nss`  
-42 functions · 48 constants
+23 functions · 48 constants
 
 ## Constants
 
@@ -144,24 +144,6 @@ Source: `NSS/x2_/x2_inc_switches.nss`
 > Define the name of the 2da file which is used for the wandering monster
 > system
 
-#### `void SetModuleSwitch(string sModuleSwitchConstant, int bValue)`
-> Interface to switch on / off specific  subsystems or behaviors
-> Check X2_INC_SWITCHES.NSS for details
-
-#### `int GetModuleSwitchValue(string sModuleSwitchConstant)`
-> Return the value of a module switch set by SetModuleSwitch
-> See X2_INC_SWITCHES for a list of all module switches
-
-#### `void SetDoorFlag(object oDoor, string sDoorFlagConstant, int nValue)`
-
-#### `int GetDoorFlag(object oDoor, string sDoorFlagConstant)`
-
-#### `void SetItemFlag(object oItem, string sItemFlagConstant, int nValue)`
-
-#### `int GetItemFlag(object oItem, string sItemFlagConstant)`
-
-#### `void SetModuleOverrideSpellscript(string sScriptName)`
-
 #### `string GetModuleOverrideSpellscript()`
 
 #### `void SetModuleOverrideSpellScriptFinished()`
@@ -172,54 +154,6 @@ Source: `NSS/x2_/x2_inc_switches.nss`
 
 #### `int GetModuleOverrideSpellScriptFinished()`
 
-#### `void SetCreatureOverrideAIScript(object oCreature, string sScriptName)`
-
-#### `void SetCreatureOverrideAIScriptFinished(object oCreature = OBJECT_SELF)`
-
-#### `object GetCreatureOverrideAIScriptTarget(object oCreature = OBJECT_SELF)`
-
-#### `void ClearCreatureOverrideAIScriptTarget(object oCreature = OBJECT_SELF)`
-
-#### `void SetCreatureFlag(object oCreature, string sFlag, int nValue)`
-
-#### `int GetCreatureFlag(object oCreature, string sFlag)`
-
-#### `int GetUserDefinedItemEventNumber()`
-> Get the current UserDefined Item Event Number
-> X2_ITEM_EVENT_ACTIVATE
-> X2_ITEM_EVENT_EQUIP
-> X2_ITEM_EVENT_UNEQUIP
-> X2_ITEM_EVENT_ONHITCAST
-> X2_ITEM_EVENT_ACQUIRE
-> X2_ITEM_EVENT_UNACQUIRE
-> X2_ITEM_EVENT_SPELLCAST_AT
-
-#### `void SetUserDefinedItemEventNumber(int nEvent)`
-> Set the current UserDefined Item Event Number
-> X2_ITEM_EVENT_ACTIVATE
-> X2_ITEM_EVENT_EQUIP
-> X2_ITEM_EVENT_UNEQUIP
-> X2_ITEM_EVENT_ONHITCAST
-> X2_ITEM_EVENT_ACQUIRE
-> X2_ITEM_EVENT_UNACQUIRE
-> X2_ITEM_EVENT_SPELLCAST_AT
-
 #### `string GetUserDefinedItemEventScriptName(object oItem)`
 > Returns the name for the User Defined Item Event script for oItem,
 > including possible prefixes configured by SetUserDefinedItemEventPrefix
-
-#### `void SetUserDefinedItemEventPrefix(string sPrefix = "")`
-> You can define a prefix for any User Defined Item Event here, to prevent
-> people from executing scripts you do not like them to execute on your
-> local vault server
-
-#### `int ExecuteScriptAndReturnInt(string sScript, object oTarget)`
-> Wrapper for Execute Script to execute a script and get an integer
-> return value. Do not nest this function!
-
-#### `void SetExecutedScriptReturnValue(int nValue = X2_EXECUTE_SCRIPT_CONTINUE)`
-> Helper function for ExecuteScriptAndReturnInt
-
-#### `void SetWanderingMonster2DAFile(string s2DAName = "des_restsystem")`
-> Define the name of the 2da file which is used for the wandering monster
-> system

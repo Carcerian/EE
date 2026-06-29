@@ -1,7 +1,7 @@
 # `x0_i0_projtrap.nss`
 
 Source: `NSS/x0_/x0_i0_projtrap.nss`  
-5 functions · 0 constants
+3 functions · 0 constants
 
 ## Functions
 
@@ -29,10 +29,3 @@ Source: `NSS/x0_/x0_i0_projtrap.nss`
 #### `int GetIsTrapOriginValid(object oOrigin)`
 > Small private function -- this just checks to see if the item
 > is a valid origin object.
-
-#### `object GetProjectileTrapOrigin(object oTarget, object oTrigger = OBJECT_SELF)`
-> Get the origin for a projectile trap. This simply returns the nearest
-> object to the target that has a tag matching the tag of the trigger.
-
-#### `void TriggerProjectileTrap(int nSpell, object oTarget, int nCasterLevel = 20, object oOrigin = OBJECT_INVALID, object oTrigger = OBJECT_SELF, int nProjectilePath = PROJECTILE_PATH_TYPE_DEFAULT)`
-> See detailed comments above

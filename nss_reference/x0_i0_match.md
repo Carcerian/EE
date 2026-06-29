@@ -1,7 +1,7 @@
 # `x0_i0_match.nss`
 
 Source: `NSS/x0_/x0_i0_match.nss`  
-39 functions · 2 constants
+20 functions · 2 constants
 
 ## Constants
 
@@ -83,71 +83,5 @@ Source: `NSS/x0_/x0_i0_match.nss`
 #### `int GetHasEffect(int nEffectType, object oTarget = OBJECT_SELF)`
 > Checks the target for a specific EFFECT_TYPE constant value
 
-#### `int GetMatchCompatibility(talent tUse, string sClass, int nType)`
-
-#### `int MatchCombatProtections(talent tUse)`
-
-#### `int MatchSpellProtections(talent tUse)`
-
-#### `int MatchAreaOfEffectSpell(int nSpell)`
-> if the passed in spell is an area of effect spell of any kind
-
-#### `int MatchElementalProtections(talent tUse)`
-
 #### `int GetRemovalSpell()`
 > Returns a potential removal spell that might be useful in this situation
-
-#### `int MatchDoIHaveAMindAffectingSpellOnMe(object oTarget)`
-> Do I have any effect on me that came from a mind affecting spell?
-
-#### `int MatchMindAffectingSpells(int iSpell)`
-> Paus
-
-#### `int MatchPersonSpells(int iSpell)`
-> Paus
-
-#### `int MatchSingleHandedWeapon(object oItem)`
-
-#### `int MatchDoubleHandedWeapon(object oItem)`
-> TRUE if the item is a double-handed weapon
-
-#### `int MatchMeleeWeapon(object oItem)`
-> TRUE if the item is a melee weapon
-
-#### `int MatchShield(object oItem)`
-> TRUE if the item is a shield
-
-#### `int MatchCrossbow(object oItem)`
-> True if the item is a crossbow
-
-#### `int MatchNormalBow(object oItem)`
-> True if the item is a longbow or shortbow
-
-#### `int MatchInflictTouchAttack(int nSpell)`
-> True if this spell is one of the Reverse Healing touch Attacks
-
-#### `int MatchNonliving(int nRacialType)`
-> True if the creature is an elemental, undead, or golem
-
-#### `int VerifyDisarm(talent tUse, object oTarget)`
-> Verify Disarm
-> Copyright (c) 2001 Bioware Corp.
-> Checks that the melee talent being used
-> is Disarm and if so then if the target has a
-> weapon.
-> This should return TRUE if:
-> - we are not trying to use disarm
-> - we are using disarm appropriately
-> This should return FALSE if:
-> - we are trying to use disarm on an inappropriate target
-> - we are using disarm too frequently
-> If this returns FALSE, we will fall back to a standard
-> melee attack instead.
-
-#### `int VerifyCombatMeleeTalent(talent tUse, object oTarget)`
-> Created By: Preston Watamaniuk
-> Created On: May 23, 2002
-
-#### `int GetHasEffect(int nEffectType, object oTarget = OBJECT_SELF)`
-> Created By: Preston Watamaniuk
-> Created On: Oct 26, 2001

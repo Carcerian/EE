@@ -1,7 +1,7 @@
 # `x2_inc_restsys.nss`
 
 Source: `NSS/x2_/x2_inc_restsys.nss`  
-40 functions · 7 constants
+26 functions · 7 constants
 
 ## Constants
 
@@ -124,12 +124,6 @@ Source: `NSS/x2_/x2_inc_restsys.nss`
 #### `struct wm_struct GetWMStructByName(string sName, int bAllData = FALSE)`
 > return a wm_struct of the data in the row with TableName sName in the 2da
 
-#### `void WMBuild2DACache()`
-> Georg Zoeller, 2003-05-29
-> Reads all encounter tables from 2da specified in X2_WM_2DA_NAME and caches
-> them to LocalVariables to speed up access to them.
-> This function is intended to be used an OnModuleLoad event script
-
 #### `struct wm_struct WMGetAreaMonsterTable(object oArea)`
 > Returns a wm_struct containing the full wandering monster table
 > for the selected area.
@@ -145,79 +139,10 @@ Source: `NSS/x2_/x2_inc_restsys.nss`
 > If a door is used as spawnspot, it will be stored in X2_WM_AMBUSH_DOOR
 > for later retrieval
 
-#### `void WMSetupAmbush(object oPC, string sMonsters)`
-
 #### `void WMSpawnAmbushMonsters(object oPC, location lSpot)`
 > I had to make this a seperate function in order to delay it
 > It is just called from inside WMRunAmbush
 
-#### `void WMRunAmbush(object oPC)`
-> This runs the actual wandering monster ambush on the pc, using the data stored
-> by WMSetupAmbush.
-
-#### `int WMCheckForWanderingMonster(object oPC)`
-> Georg Zoeller,  2003-05-29
-> Wandering Monster System, Check for wandering
-> monster
-> oPC - the player who triggered the check
-> This will check if the player has triggered a
-> wandering monster and return TRUE if yes.
-> To be used in the OnRest event handler.
-> It will also setup the encounter so if
-> ExecuteScript (DoWanderingMonster) is called on
-> a PC, the encounter will start.
-> Has integrated flood protection to prevent
-> more than one encounter in X2_WM_FLOODPROTPERIOD
-> seconds (see header)
-
-#### `void WMSetAreaTable(object oArea, string sTableName, int bUseDoors = FALSE, int nListenCheckDC = 0)`
-> Wandering Monster System, Set the Wandering Monster Table for an Area
-> oArea         - the Area
-> sTableName    - The name of the encounter table (TableName Column in 2da)
-> bUseDoors     - Monsters will spawn behind the next not-locked door, open them
-> and move onto the pc (default = TRUE )
-> nListenCheckDC - The DC to beat in an listen check in order to wake up early.
-> (default = -1, use value in 2da)
-> NOTE: You can call WMSetAreaProbability later to change the probability
-> of having an encounter
-
-#### `void WMSetAreaProbability(object oArea, int nDayPercent, int nNightPercent)`
-> Wandering Monster System, set area probability for encountering wandering monsters on rest
-> oArea - Self Explaining
-> nDayPercent, nNightPercent - Percentage chance for encounter on resting
-> NOTE: If you change the encounter Table via WMSetAreaTable, probabilities for the area
-> are reset to their default values specified in the 2da.
-
-#### `int WMGetAreaHasTable(object oArea)`
-> Returns TRUE if oArea has an encounter table set
-
-#### `int WMGetWanderingMonstersDisabled(object oArea)`
-> Returns TRUE if oArea has the Wandering Monster System disabled
-
-#### `void WMSetWanderingMonstersDisabled(object oArea, int bDisabled = FALSE)`
-> Sets if oArea has the Wandering Monster System disabled
-
 #### `void WMMakePartyRest(object oPC)`
 > Will make the party of the character rest as long as everyone is in the
 > same area currently not useds
-
-#### `int WMStartPlayerRest(object oPC)`
-> Player Rest code
-> Fades Screen to Black for PC, applies sleep vfx
-> If an ambush is in progress it will return FALSE so resting can be disabled
-
-#### `void WMFinishPlayerRest(object oPC, int bRestCanceled = FALSE)`
-> Remove the cutscene blackness, etc
-> Called after a rest is done from OnPlayerRest Event
-
-#### `int WMGetAreaListenCheck(object oArea)`
-> Returns the DC to beat in a listen check to wake up. Its defined in the 2da
-> but can be overwritten in WMSetAreaTable)
-
-#### `int WMDoListenCheck(object oPC)`
-> Do a listen check against the designer defined DC for waking up in that area
-> See WMSetAreaTable() on how to set the DC.
-
-#### `int WMGetUseAppearAnimation(object oArea)`
-> Returns TRUE if appear animations are used when monsters are spawned by
-> the system.

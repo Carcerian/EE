@@ -1,7 +1,7 @@
 # `x0_i0_db.nss`
 
 Source: `NSS/x0_/x0_i0_db.nss`  
-24 functions · 0 constants
+12 functions · 0 constants
 
 ## Functions
 
@@ -41,32 +41,3 @@ Source: `NSS/x0_/x0_i0_db.nss`
 > Use RetrieveCampaign with the given id to restore it.
 > If you specify an owner, the object will try to be created in their repository
 > If the owner can't handle the item (or if it's a creature) it will be created on the ground.
-
-#### `float dbGetCampaignFloat(string sCampaignName, string sVarName, object oPlayer = OBJECT_INVALID)`
-
-#### `int dbGetCampaignInt(string sCampaignName, string sVarName, object oPlayer = OBJECT_INVALID)`
-
-#### `location dbGetCampaignLocation(string sCampaignName, string sVarName, object oPlayer = OBJECT_INVALID)`
-
-#### `string dbGetCampaignString(string sCampaignName, string sVarName, object oPlayer = OBJECT_INVALID)`
-
-#### `vector dbGetCampaignVector(string sCampaignName, string sVarName, object oPlayer = OBJECT_INVALID)`
-
-#### `void dbSetCampaignFloat(string sCampaignName, string sVarName, float flFloat, object oPlayer = OBJECT_INVALID)`
-
-#### `void dbSetCampaignInt(string sCampaignName, string sVarName, int nInt, object oPlayer = OBJECT_INVALID)`
-
-#### `void dbSetCampaignLocation(string sCampaignName, string sVarName, location locLocation, object oPlayer = OBJECT_INVALID)`
-
-#### `void dbSetCampaignString(string sCampaignName, string sVarName, string sString, object oPlayer = OBJECT_INVALID)`
-
-#### `void dbSetCampaignVector(string sCampaignName, string sVarName, vector vVector, object oPlayer = OBJECT_INVALID)`
-
-#### `object dbRetrieveCampaignObject(string sCampaignName, string sVarName, location locLocation, object oOwner = OBJECT_INVALID, object oPlayer = OBJECT_INVALID)`
-> Use RetrieveCampaign with the given id to restore it.
-> If you specify an owner, the object will try to be created in their repository
-> If the owner can't handle the item (or if it's a creature) it will be created on the ground.
-
-#### `int dbStoreCampaignObject(string sCampaignName, string sVarName, object oObject, object oPlayer = OBJECT_INVALID)`
-> Stores an object with the given id.
-> Returns 0 if it failled, 1 if it worked.

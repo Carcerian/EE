@@ -1,7 +1,7 @@
 # `x2_inc_itemprop.nss`
 
 Source: `NSS/x2_/x2_inc_itemprop.nss`  
-68 functions · 18 constants
+40 functions · 18 constants
 
 ## Constants
 
@@ -172,59 +172,6 @@ Source: `NSS/x2_/x2_inc_itemprop.nss`
 #### `int IPGetNumberOfItemProperties(object oItem)`
 > Returns an integer with the number of properties present oItem
 
-#### `void IPRemoveMatchingItemProperties(object oItem, int nItemPropertyType, int nItemPropertyDuration = DURATION_TYPE_TEMPORARY, int nItemPropertySubType = -1)`
-> Removes all itemproperties with matching nItemPropertyType and
-> nItemPropertyDuration (a DURATION_TYPE_* constant)
-
-#### `void IPRemoveAllItemProperties(object oItem, int nItemPropertyDuration = DURATION_TYPE_TEMPORARY)`
-> Removes ALL item properties from oItem matching nItemPropertyDuration
-
-#### `int IPGetIsItemEquipable(object oItem)`
-> returns TRUE if item can be equipped. Uses Get2DAString, so do not use in a loop!
-
-#### `object IPDyeArmor(object oItem, int nColorType, int nColor)`
-> Changes the color of an item armor
-> oItem        - The armor
-> nColorType   - ITEM_APPR_ARMOR_COLOR_* constant
-> nColor       - color from 0 to 63
-> Since oItem is destroyed in the process, the function returns
-> the item created with the color changed
-
-#### `object IPGetIPWorkContainer(object oCaller = OBJECT_SELF)`
-> Returns the container used for item property and appearance modifications in the
-> module. If it does not exist, it is created
-
-#### `itemproperty IPGetItemPropertyByID(int nPropID, int nParam1 = 0, int nParam2 = 0, int nParam3 = 0, int nParam4 = 0)`
-> This function needs to be rather extensive and needs to be updated if there are new
-> ip types we want to use, but it goes into the item property include anyway
-
-#### `int IPGetIsProjectile(object oItem)`
-> Returns TRUE if oItem is a projectile
-
-#### `int IPGetIsRangedWeapon(object oItem)`
-> Returns TRUE if oItem is a ranged weapon
-
-#### `int IPGetIsMeleeWeapon(object oItem)`
-> Returns TRUE if oItem is a melee weapon
-
-#### `int IPGetIsBludgeoningWeapon(object oItem)`
-> Returns TRUE if weapon is a blugeoning weapon
-> Uses Get2DAString!
-
-#### `int IPGetIPConstCastSpellFromSpellID(int nSpellID)`
-> Return the IP_CONST_CASTSPELL_* ID matching to the SPELL_* constant given
-> in nSPELL_ID.
-> This uses Get2DAstring, so it is slow. Avoid using in loops!
-> returns -1 if there is no matching property for a spell
-
-#### `int IPGetItemHasItemOnHitPropertySubType(object oTarget, int nSubType)`
-> Returns TRUE if an item has ITEM_PROPERTY_ON_HIT and the specified nSubType
-> possible values for nSubType can be taken from IPRP_ONHIT.2da
-> popular ones:
-> 5 - Daze
-> 19 - ItemPoison
-> 24 - Vorpal
-
 #### `int IPGetNumberOfArmorAppearances(int nPart)`
 > Returns the number of possible armor part variations for the specified part
 > nPart - ITEM_APPR_ARMOR_MODEL_* constant
@@ -235,62 +182,16 @@ Source: `NSS/x2_/x2_inc_itemprop.nss`
 > Returns the previous or next armor appearance type, depending on the specified
 > mode (X2_IP_ARMORTYPE_NEXT || X2_IP_ARMORTYPE_PREV)
 
-#### `int IPGetNextArmorAppearanceType(object oArmor, int nPart)`
-> Returns the next valid appearance type for oArmor
-> Uses Get2DAstring, so do not use in loops
-
-#### `int IPGetPrevArmorAppearanceType(object oArmor, int nPart)`
-> Returns the next valid appearance type for oArmor
-> Uses Get2DAstring, so do not use in loops
-
-#### `int IPGetRandomArmorAppearanceType(object oArmor, int nPart)`
-> Returns the next valid appearance type for oArmor
-> Uses Get2DAstring, so do not use in loops
-
-#### `object IPGetModifiedArmor(object oArmor, int nPart, int nMode, int bDestroyOldOnSuccess)`
-> Returns a new armor based of oArmor with nPartModified
-> nPart - ITEM_APPR_ARMOR_MODEL_* constant of the part to be changed
-> nMode -
-> X2_IP_ARMORTYPE_NEXT    - next valid appearance
-> X2_IP_ARMORTYPE_PREV    - previous valid apperance;
-> X2_IP_ARMORTYPE_RANDOM  - random valid appearance (torso is never changed);
-> bDestroyOldOnSuccess - Destroy oArmor in process?
-> Uses Get2DAstring, so do not use in loops
-
 #### `object IPCreateProficiencyFeatItemOnCreature(object oCreature)`
 > Creates a special ring on oCreature that gives
 > all weapon and armor proficiencies to the wearer
 > Item is set non dropable
 
-#### `void IPSafeAddItemProperty(object oItem, itemproperty ip, float fDuration = 0.0f, int nAddItemPropertyPolicy = X2_IP_ADDPROP_POLICY_REPLACE_EXISTING, int bIgnoreDurationType = FALSE, int bIgnoreSubType = FALSE)`
-> Add an item property in a safe fashion, preventing unwanted stacking
-> Parameters:
-> oItem     - the item to add the property to
-> ip        - the itemproperty to add
-> fDuration - set 0.0f to add the property permanent, anything else is temporary
-> nAddItemPropertyPolicy - How to handle existing properties. Valid values are:
-> X2_IP_ADDPROP_POLICY_REPLACE_EXISTING - remove any property of the same type, subtype, durationtype before adding;
-> X2_IP_ADDPROP_POLICY_KEEP_EXISTING - do not add if any property with same type, subtype and durationtype already exists;
-> X2_IP_ADDPROP_POLICY_IGNORE_EXISTING - add itemproperty in any case - Do not Use with OnHit or OnHitSpellCast props!
-> bIgnoreDurationType  - If set to TRUE, an item property will be considered identical even if the DurationType is different. Be careful when using this
-> with X2_IP_ADDPROP_POLICY_REPLACE_EXISTING, as this could lead to a temporary item property removing a permanent one
-> bIgnoreSubType       - If set to TRUE an item property will be considered identical even if the SubType is different.
-> WARNING: This function is used all over the game. Touch it and break it and the wrath
-> of the gods will come down on you faster than you can saz "I didn't do it"
-
-#### `int IPGetItemHasProperty(object oItem, itemproperty ipCompareTo, int nDurationCompare, int bIgnoreSubType = FALSE)`
-
 #### `object IPGetTargetedOrEquippedMeleeWeapon()`
 
 #### `object IPGetTargetedOrEquippedArmor(int bAllowShields = FALSE)`
 
-#### `int IPGetItemSequencerProperty(object oItem)`
-> Returns FALSE it the item has no sequencer property
-> Returns number of spells that can be stored in any other case
-
 #### `void IPCopyItemProperties(object oSource, object oTarget, int bIgnoreCraftProps = TRUE)`
-
-#### `int IPGetIsIntelligentWeapon(object oItem)`
 
 #### `int IPGetWeaponAppearanceType(object oWeapon, int nPart, int nMode)`
 > (private)
@@ -307,47 +208,7 @@ Source: `NSS/x2_/x2_inc_itemprop.nss`
 
 #### `object IPCreateAndModifyArmorRobe(object oArmor, int nRobeType)`
 
-#### `int IPGetDamagePowerConstantFromNumber(int nNumber)`
-> Provide mapping between numbers and power constants for
-> ITEM_PROPERTY_DAMAGE_BONUS
-
-#### `int IPGetDamageBonusConstantFromNumber(int nNumber)`
-> Provide mapping between numbers and bonus constants for ITEM_PROPERTY_DAMAGE_BONUS
-> Note that nNumber should be > 0!
-
-#### `void IPWildShapeCopyItemProperties(object oOld, object oNew, int bWeapon = FALSE)`
-> GZ, Sept. 30 2003
-> Special Version of Copy Item Properties for use with greater wild shape
-> oOld - Item equipped before polymorphing (source for item props)
-> oNew - Item equipped after polymorphing  (target for item props)
-> bWeapon - Must be set TRUE when oOld is a weapon.
-
-#### `int IPGetWeaponEnhancementBonus(object oWeapon, int nEnhancementBonusType = ITEM_PROPERTY_ENHANCEMENT_BONUS)`
-> Returns the current enhancement bonus of a weapon (+1 to +20), 0 if there is
-> no enhancement bonus. You can test for a specific type of enhancement bonus
-> by passing the appropritate ITEM_PROPERTY_ENHANCEMENT_BONUS* constant into
-> nEnhancementBonusType
-
-#### `void IPSetWeaponEnhancementBonus(object oWeapon, int nBonus, int bOnlyIfHigher = TRUE)`
-> Shortcut function to set the enhancement bonus of a weapon to a certain bonus
-> Specifying bOnlyIfHigher as TRUE will prevent a bonus lower than the requested
-> bonus from being applied. Valid values for nBonus are 1 to 20.
-
-#### `void IPUpgradeWeaponEnhancementBonus(object oWeapon, int nUpgradeBy)`
-> Shortcut function to upgrade the enhancement bonus of a weapon by the
-> number specified in nUpgradeBy. If the resulting new enhancement bonus
-> would be out of bounds (>+20), it will be set to +20
-
 #### `int IPGetHasItemPropertyByConst(int nItemProp, object oItem)`
 
 #### `int IPGetHasUseLimitation(object oItem)`
 > Returns TRUE if a use limitation of any kind is present on oItem
-
-#### `int IPGetHasItemPropertyOnCharacter(object oPC, int nItemPropertyConst)`
-> GZ, Oct 2003
-> Returns TRUE if a character has any item equipped that has the itemproperty
-> defined in nItemPropertyConst in it (ITEM_PROPERTY_* constant)
-
-#### `int IPGetNumberOfItemProperties(object oItem)`
-> GZ, Oct 24, 2003
-> Returns an integer with the number of properties present oItem

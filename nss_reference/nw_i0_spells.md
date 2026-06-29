@@ -1,7 +1,7 @@
 # `nw_i0_spells.nss`
 
 Source: `NSS/nw_/nw_i0_spells.nss`  
-34 functions · 1 constants
+21 functions · 1 constants
 
 ## Constants
 
@@ -85,36 +85,6 @@ Source: `NSS/nw_/nw_i0_spells.nss`
 > i.e., used in Mage Armor to remove any previous
 > mage armors
 
-#### `int MyResistSpell(object oCaster, object oTarget, float fDelay = 0.0)`
-
-#### `int MySavingThrow(int nSavingThrow, object oTarget, int nDC, int nSaveType = SAVING_THROW_TYPE_NONE, object oSaveVersus = OBJECT_SELF, float fDelay = 0.0)`
-
-#### `effect CreateProtectionFromAlignmentLink(int nAlignment, int nPower = 1)`
-
-#### `effect CreateDoomEffectsLink()`
-
-#### `void RemoveSpellEffects(int nSpell_ID, object oCaster, object oTarget)`
-
-#### `void RemoveSpecificEffect(int nEffectTypeID, object oTarget)`
-
-#### `float GetSpellEffectDelay(location SpellTargetLocation, object oTarget)`
-
-#### `float GetRandomDelay(float fMinimumTime = 0.4, float MaximumTime = 1.1)`
-
-#### `int GetScaledDuration(int nActualDuration, object oTarget)`
-
-#### `effect GetScaledEffect(effect eStandard, object oTarget)`
-
-#### `int RemoveProtections(int nSpell_ID, object oTarget, int nCount)`
-
-#### `int GetSpellBreachProtection(int nLastChecked)`
-> Returns the nLastChecked-nth highest spell on the creature for use in
-> the spell breach routines
-> Please modify the constatn NW_I0_SPELLS_MAX_BREACH at the top of this file
-> if you change the number of spells.
-
 #### `void AssignAOEDebugString(string sString)`
 
 #### `void PlayDragonBattleCry()`
-
-#### `void TrapDoElectricalDamage(int ngDamageMaster, int nSaveDC, int nSecondary)`

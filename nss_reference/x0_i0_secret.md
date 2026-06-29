@@ -1,7 +1,7 @@
 # `x0_i0_secret.nss`
 
 Source: `NSS/x0_/x0_i0_secret.nss`  
-19 functions · 8 constants
+10 functions · 8 constants
 
 ## Constants
 
@@ -61,50 +61,6 @@ Source: `NSS/x0_/x0_i0_secret.nss`
 #### `void UseSecretTransport(object oPC, object oSecretItem = OBJECT_SELF)`
 > Use a secret transport to transport a PC and associates
 
-#### `int GetIsSecretItemRevealed(object oDetectTrigger = OBJECT_SELF)`
-> Determine if the secret item is revealed
-
-#### `object GetSecretItemRevealed(object oDetectTrigger = OBJECT_SELF)`
-> Returns the associated secret item
-
-#### `int GetIsSecretItemOpen(object oSecretItem = OBJECT_SELF)`
-> Returns whether the secret item is currently open --
-> should be called from the secret item itself after
-> being revealed.
-
-#### `void SetIsSecretItemOpen(object oSecretItem = OBJECT_SELF, int bValue = TRUE)`
-> Set whether the secret item is open or not
-
 #### `int QuickDetectSecret(object oPC, object oDetectTrigger)`
 > Private function (not prototyped to keep invisible in comments section)
 > just to avoid a bit of duplicate code in the Detect... functions.
-
-#### `int DetectSecretItem(object oPC, object oDetectTrigger = OBJECT_SELF, int nSkillType = SKILL_SEARCH)`
-> Detection function for a secret item.
-> Uses the specified skill (defaults to SKILL_SEARCH; use any of the
-> SKILL_ constants here) and uses the key tag of the trigger as the DC
-> of the detection check.
-> Returns TRUE if player detects, FALSE otherwise.
-
-#### `int DetectSecretItemByClass(object oPC, object oDetectTrigger = OBJECT_SELF, int nClassType = CLASS_TYPE_RANGER)`
-> Detection function that reveals an item only to members of the specified
-> class. Compares the PC's level in the class plus a small modifier against
-> the value of the key tag of the trigger.
-
-#### `void RevealSecretItem(string sResRef, object oDetectTrigger = OBJECT_SELF)`
-> Reveal function for a secret item. When called, this item
-> creates the secret item from blueprint in the location of the
-> item waypoint. Search for "SECRET_" under Constants
-> to see some common blueprints, although any item blueprint can be
-> used here.
-
-#### `void ResetSecretItem(object oDetectTrigger = OBJECT_SELF)`
-> Reset function for a secret item. When called, this destroys the
-> item and resets the invisible detection object going again. This WILL
-> cause any treasure and such to regenerate.
-
-#### `void UseSecretTransport(object oPC, object oSecretItem = OBJECT_SELF)`
-> Use a secret transport to transport a PC and associates.
-> This can actually also be used for regular portals and trapdoors,
-> as long as the destination waypoint instead uses the tag of
-> the portal/trapdoor.

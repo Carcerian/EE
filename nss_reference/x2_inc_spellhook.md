@@ -1,7 +1,7 @@
 # `x2_inc_spellhook.nss`
 
 Source: `NSS/x2_/x2_inc_spellhook.nss`  
-14 functions · 1 constants
+9 functions · 1 constants
 
 ## Constants
 
@@ -39,26 +39,7 @@ Source: `NSS/x2_/x2_inc_spellhook.nss`
 > oItem - pass GetSpellTargetObject in here
 
 #### `int X2RunUserDefinedSpellScript()`
-
-#### `int X2UseMagicDeviceCheck()`
-
-#### `int X2CastOnItemWasAllowed(object oItem)`
-> GZ: This is a filter I added to prevent spells from firing their original spell
-> script when they were cast on items and do not have special coding for that
-> case. If you add spells that can be cast on items you need to put them into
-> des_crft_spells.2da
-
-#### `int X2RunUserDefinedSpellScript()`
 > Execute a user overridden spell script.
-
-#### `int X2GetSpellCastOnSequencerItem(object oItem)`
-> Created Brent Knowles, Georg Zoeller 2003-07-31
-> Returns TRUE (and charges the sequencer item) if the spell
-> ... was cast on an item AND
-> ... the item has the sequencer property
-> ... the spell was non hostile
-> ... the spell was not cast from an item
-> in any other case, FALSE is returned an the normal spellscript will be run
 
 #### `void X2BreakConcentrationSpells()`
 > This is our little concentration system for black blade of disaster
@@ -73,8 +54,3 @@ Source: `NSS/x2_/x2_inc_spellhook.nss`
 #### `int X3ShapeShiftSpell(object oTarget)`
 > This function will return TRUE if the spell that is cast is a shape shifting
 > spell.
-
-#### `int X2PreSpellCastCode()`
-> if FALSE is returned by this function, the spell will not be cast
-> the order in which the functions are called here DOES MATTER, changing it
-> WILL break the crafting subsystems

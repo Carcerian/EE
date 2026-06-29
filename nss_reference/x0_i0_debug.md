@@ -1,7 +1,7 @@
 # `x0_i0_debug.nss`
 
 Source: `NSS/x0_/x0_i0_debug.nss`  
-8 functions · 0 constants
+4 functions · 0 constants
 
 ## Functions
 
@@ -22,12 +22,3 @@ Source: `NSS/x0_/x0_i0_debug.nss`
 > Inserts a debug print string into the client log file.
 > This function is commented out for release; use PrintString for
 > debugging.
-
-#### `void newdebug(string sString)`
-
-#### `void DebugPrintTalentID(talent tTalent)`
-
-#### `void DubugPrintTalentID(talent tTalent)`
-> Misspelled old version, bleah
-
-#### `void MyPrintString(string sString)`

@@ -1,7 +1,7 @@
 # `x0_i0_walkway.nss`
 
 Source: `NSS/x0_/x0_i0_walkway.nss`  
-18 functions · 5 constants
+9 functions · 5 constants
 
 ## Constants
 
@@ -65,44 +65,6 @@ Source: `NSS/x0_/x0_i0_walkway.nss`
 #### `int CheckWayPoints(object oWalker = OBJECT_SELF)`
 > Check to make sure that the walker has at least one valid
 > waypoint they will walk to at some point (day or night).
-
-#### `int GetIsPostOrWalking(object oWalker = OBJECT_SELF)`
-> Check to see if the specified object is currently walking
-> waypoints or standing at a post.
-
-#### `int GetWalkCondition(int nCondition, object oCreature = OBJECT_SELF)`
-> Get whether the specified WalkWayPoints condition is set
-
-#### `void SetWalkCondition(int nCondition, int bValid = TRUE, object oCreature = OBJECT_SELF)`
-> Set a given WalkWayPoints condition
-
-#### `string GetWaypointSuffix(int i)`
-> Get a waypoint number suffix, padded if necessary
-
-#### `void LookUpWalkWayPoints()`
-> Look up the caller's waypoints and store them on the creature.
-> Waypoint variables:
-> WP_NUM     : number of day waypoints
-> WN_NUM     : number of night waypoints
-> WP_#, WN_# : the waypoint objects
-> WP_CUR     : the current waypoint number
-
-#### `object GetNextWalkWayPoint(object oCreature = OBJECT_SELF)`
-> Get the creature's next waypoint.
-> If it has just become day/night, or if this is
-> the first time we're getting a waypoint, we go
-> to the nearest waypoint in our new set.
-
-#### `int GetNearestWalkWayPoint(object oCreature = OBJECT_SELF)`
-> Get the number of the nearest of the creature's current
-> set of waypoints (respecting day/night).
-
-#### `void WalkWayPoints(int nRun = FALSE, float fPause = 1.0)`
-> Make the caller walk through their waypoints or go to their post.
-
-#### `int CheckWayPoints(object oWalker = OBJECT_SELF)`
-> Check to make sure that the walker has at least one valid
-> waypoint to walk to at some point.
 
 #### `int GetIsPostOrWalking(object oWalker = OBJECT_SELF)`
 > Check to see if the specified object is currently walking

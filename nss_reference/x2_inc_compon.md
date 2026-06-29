@@ -1,7 +1,7 @@
 # `x2_inc_compon.nss`
 
 Source: `NSS/x2_/x2_inc_compon.nss`  
-4 functions · 1 constants
+2 functions · 1 constants
 
 ## Constants
 
@@ -13,11 +13,6 @@ Source: `NSS/x2_/x2_inc_compon.nss`
 
 #### `void craft_drop_items(object oSlayer)`
 > Drops craft items if killed or bashed
-
-#### `void craft_drop_placeable()`
-> handles dropping crafting items if a placeable is bashed
-
-#### `void craft_drop_items(object oSlayer)`
 
 #### `void craft_drop_placeable()`
 > handles dropping crafting items if a placeable is bashed

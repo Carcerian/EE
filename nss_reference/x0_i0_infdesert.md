@@ -1,7 +1,7 @@
 # `x0_i0_infdesert.nss`
 
 Source: `NSS/x0_/x0_i0_infdesert.nss`  
-24 functions · 25 constants
+13 functions · 25 constants
 
 ## Constants
 
@@ -98,56 +98,3 @@ Source: `NSS/x0_/x0_i0_infdesert.nss`
 > Each creature in the list will have an equal chance of showing up.
 > Each creature will have the ambient animations spawn-in condition
 > set to make them wander about.
-
-#### `void INF_CreateRandomEncounter(object oArea, object oPC)`
-> Create a random encounter in the specified area, possibly based
-> on the PC's characteristics.
-> This particular version looks for a waypoint named
-> with the INF_ENCOUNTER tag and spawns there if it exists.
-
-#### `void INF_CreateRandomPlaceables(object oArea, object oPC)`
-> Create some random decorative placeables in the specified area.
-
-#### `string INF_GetEntryMessage()`
-> Message sent to the player the first time they enter an
-> infinite area.
-
-#### `string INF_GetReentryMessage()`
-> The message sent to the player when they re-enter an
-> infinite area that they've been to before.
-
-#### `string INF_GetReachStartMessage()`
-> Message sent to PC when they get dropped back to the starting
-> point from within the desert for the first time or from the
-> reward area.
-
-#### `string INF_GetReturnToStartMessage()`
-> Message sent to PC when they get dropped back to the starting
-> point after the first time. This only gets sent if there is no
-> reward area.
-
-#### `string INF_GetReachRewardMessage()`
-> Message sent to PC when they reach the reward area of the infinite
-> run for the first time.
-> <CUSTOM0> in this message will be replaced by the name of the area.
-
-#### `string INF_GetReturnToRewardMessage()`
-> Message sent to PC when they reach the reward area of the infinite
-> run on a subsequent re-entry.
-> <CUSTOM0> in this message will be replaced by the name of the area.
-
-#### `string INF_GetPoolEmptyMessage()`
-> Message sent to PC in the case where the pool of generic areas
-> is empty AND none of the generic areas currently allocated have
-> anyone from their same starting point inside. This should happen
-> very rarely, and the result will be that the PC is returned to
-> the starting point.
-
-#### `string INF_GetNeedKeyMessage()`
-> Message sent to PC when they would reach the reward area but don't
-> have the key.
-
-#### `string INF_GetNoStartMessage()`
-> Message sent to PC when no starting marker is available, which
-> means they can't enter the desert. This should only happen if
-> the modmaker has forgotten to put down a starting marker!

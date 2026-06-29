@@ -1,7 +1,7 @@
 # `x2_inc_craft.nss`
 
 Source: `NSS/x2_/x2_inc_craft.nss`  
-44 functions · 32 constants
+35 functions · 32 constants
 
 ## Constants
 
@@ -97,13 +97,6 @@ Source: `NSS/x2_/x2_inc_craft.nss`
 
 #### `string GetMaterialComponentTag(int nPropID)`
 
-#### `int CIGetIsCraftFeatBaseItem(object oItem)`
-> Return true if oItem is a crafting target item
-
-#### `object CICraftBrewPotion(object oCreator, int nSpellID)`
-> Georg, 2003-06-12
-> Create a new playermade potion object with properties matching nSpellID and return it
-
 #### `int CIGetCraftGPCost(int nLevel, int nMod)`
 > Wrapper for the crafting cost calculation, returns GP required
 
@@ -112,40 +105,13 @@ Source: `NSS/x2_/x2_inc_craft.nss`
 > Create a new playermade wand object with properties matching nSpellID
 > and return it
 
-#### `object CICraftScribeScroll(object oCreator, int nSpellID)`
-> Georg, 2003-06-12
-> Create and Return a magic wand with an item property
-> matching nSpellID. Charges are set to d20 + casterlevel
-> capped at 50 max
-
-#### `int CICraftCheckBrewPotion(object oSpellTarget, object oCaster)`
-> Returns TRUE if the player used the last spell to brew a potion
-
-#### `int CICraftCheckScribeScroll(object oSpellTarget, object oCaster)`
-> Returns TRUE if the player used the last spell to create a scroll
-
 #### `int CICraftCheckCraftWand(object oSpellTarget, object oCaster)`
 > Returns TRUE if the player used the last spell to craft a wand
-
-#### `int CIGetSpellWasUsedForItemCreation(object oSpellTarget)`
-> Georg, July 2003
-> Checks if the caster intends to use his item creation feats and
-> calls appropriate item creation subroutine if conditions are met
-> (spell cast on correct item, etc).
-> Returns TRUE if the spell was used for an item creation feat
-
-#### `object CIUseCraftItemSkill(object oPC, int nSkill, string sResRef, int nDC, object oContainer = OBJECT_INVALID)`
-> Makes oPC do a Craft check using nSkill to create the item supplied in sResRe
-> If oContainer is specified, the item will be created there.
-> Throwing weapons are created with stack sizes of 10, ammo with 20
 
 #### `int CIDoCraftItemFromConversation(int nNumber)`
 > georg, 2003-06-13 (
 > Craft an item. This is only to be called from the crafting conversation
 > spawned by x2_s2_crafting!!!
-
-#### `struct craft_struct CIGetCraftItemStructFrom2DA(string s2DA, int nRow, int nItemNo)`
-> Retrieve craft information on a certain item
 
 #### `int CIGetItemPartModificationCost(object oOldItem, int nPart)`
 > Return the cost
@@ -160,11 +126,6 @@ Source: `NSS/x2_/x2_inc_craft.nss`
 #### `int CIGetArmorModificationDC(object oOldItem, object oNewItem)`
 > returns the cost in gold piece that it would
 > cost to modify oOlditem to look like oNewItem
-
-#### `int CIGetIsSpellRestrictedFromCraftFeat(int nSpellID, int nFeatID)`
-> returns TRUE if the spell matching nSpellID is prevented from being used
-> with the CraftFeat matching nFeatID
-> This is controlled in des_crft_spells.2da
 
 #### `int CIGetCraftingReceipeRow(int nMode, object oMajor, object oMinor, int nSkill)`
 > Retrieve the row in des_crft_bmat too look up receipe

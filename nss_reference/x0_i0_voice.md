@@ -1,7 +1,7 @@
 # `x0_i0_voice.nss`
 
 Source: `NSS/x0_/x0_i0_voice.nss`  
-37 functions · 18 constants
+19 functions · 18 constants
 
 ## Constants
 
@@ -71,39 +71,3 @@ Source: `NSS/x0_/x0_i0_voice.nss`
 
 #### `int VoiceTest(int nVoice, int bAlways)`
 > PRIVATE: Test to see if valid to return this voice
-
-#### `void VoiceCanDo(int bAlways = FALSE)`
-
-#### `void VoiceCannotDo(int bAlways = FALSE)`
-
-#### `void VoicePicklock(int bAlways = FALSE)`
-
-#### `void VoiceTaskComplete(int bAlways = FALSE)`
-
-#### `void VoiceStop(int bAlways = FALSE)`
-
-#### `void VoiceCuss(int bAlways = FALSE)`
-
-#### `void VoiceHealMe(int bAlways = FALSE)`
-
-#### `void VoiceHello(int bAlways = FALSE)`
-
-#### `void VoiceGoodbye(int bAlways = FALSE)`
-
-#### `void VoiceYes(int bAlways = FALSE)`
-
-#### `void VoiceNo(int bAlways = FALSE)`
-
-#### `void VoiceLaugh(int bAlways = FALSE)`
-
-#### `void VoicePoisoned(int bAlways = FALSE)`
-
-#### `void VoiceBadIdea(int bAlways = FALSE)`
-
-#### `void VoiceThreaten(int bAlways = FALSE)`
-
-#### `void VoiceFlee(int bAlways = FALSE)`
-
-#### `void VoiceNearDeath(int bAlways = FALSE)`
-
-#### `void VoiceLookHere(int bAlways = FALSE)`

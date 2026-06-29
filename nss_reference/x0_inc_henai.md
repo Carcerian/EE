@@ -1,7 +1,7 @@
 # `x0_inc_henai.nss`
 
 Source: `NSS/x0_/x0_inc_henai.nss`  
-17 functions · 7 constants
+14 functions · 7 constants
 
 ## Constants
 
@@ -65,14 +65,3 @@ Source: `NSS/x0_/x0_inc_henai.nss`
 #### `void SendForHelp()`
 > called from state scripts (nw_g0_charm) to signal
 > to other party members to help me out
-
-#### `void SendForHelp()`
-> called from state scripts (nw_g0_charm) to signal
-> to other party members to help me out
-
-#### `void bkSetListeningPatterns()`
-> Sets up any special listening patterns in addition to the default
-> associate ones that are used
-
-#### `void HenchmenCombatRound(object oIntruder)`
-> Special combat round precursor for associates

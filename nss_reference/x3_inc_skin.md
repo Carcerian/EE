@@ -1,7 +1,7 @@
 # `x3_inc_skin.nss`
 
 Source: `NSS/x3_/x3_inc_skin.nss`  
-20 functions · 0 constants
+11 functions · 0 constants
 
 ## Functions
 
@@ -62,21 +62,3 @@ Source: `NSS/x3_/x3_inc_skin.nss`
 #### `void SKIN_SupportEquipSkin(object oSkin, int nCount = 0)`
 
 #### `object SKIN_SupportGetSkin(object oCreature)`
-
-#### `void SetSkinInt(object oCreature, string sVariable, int nValue)`
-
-#### `void SetSkinString(object oCreature, string sVariable, string sValue)`
-
-#### `void SetSkinFloat(object oCreature, string sVariable, float fValue)`
-
-#### `int GetSkinInt(object oCreature, string sVariable)`
-
-#### `string GetSkinString(object oCreature, string sVariable)`
-
-#### `float GetSkinFloat(object oCreature, string sVariable)`
-
-#### `void DeleteSkinInt(object oCreature, string sVariable)`
-
-#### `void DeleteSkinString(object oCreature, string sVariable)`
-
-#### `void DeleteSkinFloat(object oCreature, string sVariable)`

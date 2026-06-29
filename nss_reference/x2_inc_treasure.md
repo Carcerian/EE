@@ -1,7 +1,7 @@
 # `x2_inc_treasure.nss`
 
 Source: `NSS/x2_/x2_inc_treasure.nss`  
-25 functions · 16 constants
+20 functions · 16 constants
 
 ## Constants
 
@@ -88,12 +88,6 @@ Source: `NSS/x2_/x2_inc_treasure.nss`
 > If no configuration is used, default is X2_DTS_STACKVAR (0.5)
 > Stacks are calculated (Stack* X2_DTS_STACKVAR) + Random (Stack *X2_DTS_STACKVAR)
 
-#### `int DTSGrantCharSpecificWeaponEnhancement(int nLevel, object oItem)`
-> Enchantes the weapon passed in oItem with a scaled enhancement bonus
-> nLevel should be the level of the player who is going to receive
-> the item. Lookup is done via  des_treas_enh.2da.
-> returns TRUE on success
-
 #### `object DTSCreateItemOnObject(string sItemTemplate, object oTarget)`
 > This is a wrapper for CreateItemOnObject which can handle the stack number
 > given on
@@ -113,17 +107,3 @@ Source: `NSS/x2_/x2_inc_treasure.nss`
 #### `void DTSGenerateTreasureItems(object oContainer, object oOpener, int nClass, int nType)`
 
 #### `int DTSGetNumberofPartyMembers(object oPC)`
-
-#### `void DTSGenerateTreasureOnContainer(object oContainer, object oOpener, int nClass, int nType = 5)`
-> Created By: Georg Zoeller
-> Created On: 2003-06-03
-
-#### `object DTSGenerateCharSpecificTreasure(object oContainer, object oAdventurer, int bIgnoreFeats = FALSE)`
-> Created By: Georg Zoeller
-> Created On: 2003-06-04
-
-#### `void DTSInitialize(int nConfigIndex = 0)`
-
-#### `void DTSSetAreaTreasureProbability(object oArea, int nBaseChance, int bDisabled = FALSE)`
-> Sets the area wide chance for treasure Generation ...
-> if bDisable = TRUE, then no random treasure is generated at all
