@@ -254,6 +254,24 @@ def main():
 
     (OUT_DIR / "index.json").write_text(json.dumps(full, indent=1), encoding="utf-8")
 
+    # Flat, name-keyed symbol index — the fast-lookup layer (primarily for tooling/AI).
+    # Each name maps to a LIST (a few symbols are redefined across includes), so a
+    # lookup like  jq '.functions.GetLocalInt' symbols.json  returns the definition(s)
+    # plus source file, without loading any page into context.
+    sym_funcs, sym_consts = defaultdict(list), defaultdict(list)
+    for stem, rel, funcs, consts in selected:
+        for f in funcs:
+            sym_funcs[f["name"]].append({"signature": f["signature"], "doc": f["doc"], "source": stem})
+        for c in consts:
+            sym_consts[c["name"]].append({"type": c["type"], "value": c["value"], "note": c["note"], "source": stem})
+    symbols = {
+        "_meta": {"functions": len(sym_funcs), "constants": len(sym_consts),
+                  "note": "name -> list of definitions; source = origin .nss stem"},
+        "functions": sym_funcs,
+        "constants": sym_consts,
+    }
+    (OUT_DIR / "symbols.json").write_text(json.dumps(symbols, indent=0), encoding="utf-8")
+
     # master README
     tot_f = sum(len(f) for _, _, f, _ in selected)
     tot_c = sum(len(c) for _, _, _, c in selected)
