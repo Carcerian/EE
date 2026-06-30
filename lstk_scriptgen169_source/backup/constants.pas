@@ -180,7 +180,7 @@ const
 
 // =============================================================================
 // Symbol table data is now in constants_generated.inc for clean regeneration.
-{$I constants_generated.inc}
+    {$I constants_generated.inc}
 // =============================================================================
 
 

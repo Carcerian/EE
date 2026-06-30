@@ -734,9 +734,9 @@
         <Filename Value="constants.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="171"/>
-        <CursorPos X="113" Y="183"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="166"/>
+        <CursorPos X="2" Y="183"/>
         <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit73>

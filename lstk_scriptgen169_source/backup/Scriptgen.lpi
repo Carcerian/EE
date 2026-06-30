@@ -733,12 +733,10 @@
       <Unit73>
         <Filename Value="constants.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="171"/>
-        <CursorPos Y="188"/>
+        <CursorPos Y="184"/>
         <UsageCount Value="30"/>
-        <Loaded Value="True"/>
       </Unit73>
       <Unit74>
         <Filename Value="extform.pas"/>
