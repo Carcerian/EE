@@ -754,7 +754,7 @@ end;
 
 // Convenience function to test a condition for representing a "switch" instead
 // of an "if".
-class function  Tifchoose.RepresentsSwitch(iCond: shortint): boolean; inline;
+class function  Tifchoose.RepresentsSwitch(iCond: shortint): boolean; inline;_
 begin
     result := (iCond >= CONDITION_DIE_FLAG)  or  (iCond = CONDITION_DEFAULT_CASE);
 end;
