@@ -151,7 +151,6 @@
         <ComponentName Value="main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="67"/>
         <CursorPos X="81" Y="54"/>
@@ -734,7 +733,11 @@
       <Unit73>
         <Filename Value="constants.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="121" Y="26"/>
         <UsageCount Value="30"/>
+        <Loaded Value="True"/>
       </Unit73>
       <Unit74>
         <Filename Value="extform.pas"/>
