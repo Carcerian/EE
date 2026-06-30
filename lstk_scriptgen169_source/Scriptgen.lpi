@@ -151,8 +151,9 @@
         <ComponentName Value="main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="34"/>
+        <TopLine Value="67"/>
         <CursorPos X="81" Y="54"/>
         <UsageCount Value="30"/>
         <Loaded Value="True"/>
