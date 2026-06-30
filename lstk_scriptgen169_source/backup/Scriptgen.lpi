@@ -151,7 +151,11 @@
         <ComponentName Value="main"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="34"/>
+        <CursorPos X="81" Y="54"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="random_int.pas"/>
@@ -444,9 +448,8 @@
         <ComponentName Value="ifchoose"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="740"/>
-        <CursorPos X="79" Y="757"/>
+        <CursorPos X="78" Y="757"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit38>
@@ -712,7 +715,11 @@
         <ComponentName Value="appearance"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="122"/>
+        <CursorPos X="48" Y="139"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit71>
       <Unit72>
         <Filename Value="traps.pas"/>
@@ -781,7 +788,12 @@
         <Filename Value="biofiles.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BioFiles"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1401"/>
+        <CursorPos X="27" Y="1417"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit80>
     </Units>
   </ProjectOptions>

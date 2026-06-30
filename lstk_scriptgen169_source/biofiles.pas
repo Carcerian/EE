@@ -147,7 +147,7 @@ function  OverwriteERF(const ScriptName: TString16; const ERFName: ansistring; N
 implementation
 
 uses
-    FileUtil, Forms, start; // start is needed (just) to get the NWN location.
+  FileUtil, LazFileUtils, Forms, start; // start is needed (just) to get the NWN location.
 
 
 type // KEY format:
@@ -1414,7 +1414,7 @@ begin
     // Make sure ResRefs are only added once.
     if HashPtr.FindIndexOf(sResRef) > -1 then
         exit;
-    HashPtr.Add(sResRef, 1); // Do not care what the second parameters is, but it cannot be nil.
+    HashPtr.Add(sResRef, Pointer(1)); // Do not care what the second parameters is, but it cannot be nil.
 
     // Make sure this file has a reference.
     file_num := EnsureFile(file_name, file_type);

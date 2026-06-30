@@ -51,7 +51,7 @@ uses
   {jpeg,} {clipbrd,} Buttons, registry, {ImgList, filectrl,}
   LResources,
   {shellAPI, wininet,}
-  LCLType, {InterfaceBase,} FileUtil, Process, ActnList, BioFiles;
+  LCLType, {InterfaceBase,} FileUtil, LazFileUtils, Process, ActnList, BioFiles;
 
 
 // -----------------------------------------------------------------------------

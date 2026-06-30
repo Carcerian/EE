@@ -136,7 +136,7 @@ type
 // -----------------------------------------------------------------------------
 implementation
 
-uses FileUtil, constants, ColorC;
+uses FileUtil, LazFileUtils, constants, ColorC;
 
 const
     NUM_RACE_TAILS = 7; // The number of fixed race scalers for creature-tails.
