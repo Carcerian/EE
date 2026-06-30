@@ -733,6 +733,7 @@
       <Unit73>
         <Filename Value="constants.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="171"/>
         <CursorPos Y="188"/>

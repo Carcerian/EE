@@ -180,7 +180,7 @@ const
 
 // =============================================================================
 // Symbol table data is now in constants_generated.inc for clean regeneration.
-    {$I C:\Users\matta\OneDrive\Documents\_Carcerian_git\ee\EE\lstk_scriptgen169_source\constants_generated.inc}
+{$I constants_generated.inc}
 // =============================================================================
 
 
