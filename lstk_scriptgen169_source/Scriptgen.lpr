@@ -104,6 +104,7 @@ uses
   palettetool in 'palettetool.pas' {PaletteWindow},
   erfname in 'erfname.pas' {ErfNameForm},
   removeeffect in 'removeeffect.pas' {RemEffect},
+  sqlitegen in 'sqlitegen.pas' {sqlitegenForm},
   EventHelper in 'EventHelper.pas' {EventHelp},
   appear in 'appear.pas' {appearance},
   traps in 'traps.pas' {trapform},
